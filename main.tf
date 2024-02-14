@@ -28,7 +28,7 @@ resource "aws_subnet" "public-subnet-a" {
   tags = {
     "Name"                                        = ("${local.vpc_name}-public-subnet-a")
     "kubernetes.io/cluster/${local.cluster_name}" = "shared"
-    "kubernetes.io/role/internal-elb"             = "1"
+    "kubernetes.io/role/elb"             = "1"
   }
 }
 
@@ -39,7 +39,7 @@ resource "aws_subnet" "public-subnet-b" {
   tags = {
     "Name"                                        = ("${local.vpc_name}-public-subnet-b")
     "kubernetes.io/cluster/${local.cluster_name}" = "shared"
-    "kubernetes.io/role/internal-elb"             = "1"
+    "kubernetes.io/role/elb"             = "1"
   }
 }
 
